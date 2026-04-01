@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request an Appraisal — Yanco Appraisal Service | NH & MA</title>
+  <meta name="description" content="Request a certified residential appraisal for estate, divorce, tax abatement, or PMI removal. Serving Hillsborough, Rockingham, Middlesex, Essex & Suffolk counties.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav scrolled" id="mainNav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.png" alt="Yanco Appraisal Service" class="nav-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <span class="logo-text" style="display:none;">
+          <span class="logo-yanco">YANCO</span>
+          <span class="logo-sub">Appraisal Service</span>
+        </span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#services" class="nav-link">Services</a>
+        <a href="index.html#about" class="nav-link">Why Us</a>
+        <a href="index.html#coverage" class="nav-link">Coverage</a>
+        <a href="index.html#testimonials" class="nav-link">Reviews</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+        <a href="tel:+18668262626" class="nav-cta">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          (866) 826-2626
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contact Hero -->
+  <section class="contact-hero">
+    <div class="contact-hero-bg"></div>
+    <div class="contact-hero-overlay"></div>
+    <div class="contact-hero-content">
+      <div class="section-badge"><span class="badge-line"></span> Get in Touch <span class="badge-line"></span></div>
+      <h1 class="contact-hero-title">Request Your Appraisal</h1>
+      <p class="contact-hero-desc">Tell us about your appraisal needs and we'll get back to you promptly. Most appraisals are scheduled within 48 hours.</p>
+    </div>
+  </section>
+
+  <!-- Contact Form + Sidebar -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-layout">
+        <!-- Form -->
+        <div class="contact-form-card" id="formCard">
+          <h2 class="form-title">Appraisal Request Form</h2>
+          <form id="contactForm">
+            <div class="form-row two-col">
+              <div class="form-group">
+                <label for="fullName">Full Name <span class="required">*</span></label>
+                <input type="text" id="fullName" name="fullName" required placeholder="Your full name">
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number <span class="required">*</span></label>
+                <input type="tel" id="phone" name="phone" required placeholder="(555) 555-5555">
+              </div>
+            </div>
+            <div class="form-row two-col">
+              <div class="form-group">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required placeholder="you@email.com">
+              </div>
+              <div class="form-group">
+                <label for="role">I Am A...</label>
+                <select id="role" name="role">
+                  <option value="">Select your role</option>
+                  <option value="Homeowner">Homeowner</option>
+                  <option value="Attorney">Attorney</option>
+                  <option value="Executor / Trustee">Executor / Trustee</option>
+                  <option value="Real Estate Agent">Real Estate Agent</option>
+                  <option value="Lender / Mortgage Professional">Lender / Mortgage Professional</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row two-col">
+              <div class="form-group">
+                <label for="serviceType">Appraisal Type <span class="required">*</span></label>
+                <select id="serviceType" name="serviceType" required>
+                  <option value="">Select appraisal type</option>
+                  <option value="Estate Appraisal">Estate Appraisal</option>
+                  <option value="Divorce Appraisal">Divorce Appraisal</option>
+                  <option value="Tax Abatement">Tax Abatement</option>
+                  <option value="PMI Removal">PMI Removal</option>
+                  <option value="Pre-Listing / Pre-Purchase">Pre-Listing / Pre-Purchase</option>
+                  <option value="Retrospective Valuation">Retrospective Valuation</option>
+                  <option value="Estate Planning">Estate Planning</option>
+                  <option value="Insurance Claim">Insurance Claim</option>
+                  <option value="Capital Gains">Capital Gains</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="timeline">Timeline</label>
+                <select id="timeline" name="timeline">
+                  <option value="">Select timeline</option>
+                  <option value="ASAP / Rush">ASAP / Rush</option>
+                  <option value="Within 1 Week">Within 1 Week</option>
+                  <option value="Within 2 Weeks">Within 2 Weeks</option>
+                  <option value="Within 30 Days">Within 30 Days</option>
+                  <option value="No Rush / Flexible">No Rush / Flexible</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="propertyAddress">Property Address <span class="required">*</span></label>
+                <input type="text" id="propertyAddress" name="propertyAddress" required placeholder="Full street address, city, state, zip">
+              </div>
+            </div>
+            <div class="form-row two-col">
+              <div class="form-group">
+                <label for="propertyType">Property Type</label>
+                <select id="propertyType" name="propertyType">
+                  <option value="">Select property type</option>
+                  <option value="Single Family Home">Single Family Home</option>
+                  <option value="Condominium">Condominium</option>
+                  <option value="Multi-Family (2-4 Units)">Multi-Family (2-4 Units)</option>
+                  <option value="Townhouse">Townhouse</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="county">County</label>
+                <select id="county" name="county">
+                  <option value="">Select county</option>
+                  <optgroup label="New Hampshire">
+                    <option value="Hillsborough County, NH">Hillsborough County</option>
+                    <option value="Rockingham County, NH">Rockingham County</option>
+                  </optgroup>
+                  <optgroup label="Massachusetts">
+                    <option value="Middlesex County, MA">Middlesex County</option>
+                    <option value="Essex County, MA">Essex County</option>
+                    <option value="Suffolk County, MA">Suffolk County</option>
+                  </optgroup>
+                  <option value="Other">Other / Not Sure</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="details">Additional Details</label>
+                <textarea id="details" name="details" rows="4" placeholder="Any additional information about your appraisal needs — date-of-death for estate, court deadlines, specific concerns, etc."></textarea>
+              </div>
+            </div>
+            <div class="form-row two-col">
+              <div class="form-group">
+                <label for="referral">How Did You Find Us?</label>
+                <select id="referral" name="referral">
+                  <option value="">Select one</option>
+                  <option value="Attorney Referral">Attorney Referral</option>
+                  <option value="Google Search">Google Search</option>
+                  <option value="Yelp">Yelp</option>
+                  <option value="Facebook">Facebook</option>
+                  <option value="Friend / Family Referral">Friend / Family Referral</option>
+                  <option value="Lender Referral">Lender Referral</option>
+                  <option value="Repeat Client">Repeat Client</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="dateNeeded">Appraisal Date (if applicable)</label>
+                <input type="text" id="dateNeeded" name="dateNeeded" placeholder="e.g., Date of death: 03/15/2024">
+              </div>
+            </div>
+            <div class="form-submit">
+              <button type="submit" class="btn btn-primary">
+                Submit Request
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </form>
+          <div class="form-success" id="formSuccess">
+            <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+            <h3>Request Received!</h3>
+            <p>Thank you for reaching out. We'll review your appraisal request and get back to you within one business day. For urgent needs, call us directly.</p>
+            <a href="tel:+18668262626" class="btn btn-primary" style="margin-top: 1.5rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              Call (866) 826-2626
+            </a>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="contact-sidebar">
+          <div class="sidebar-card">
+            <div class="sidebar-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <h3>Call Us Toll-Free</h3>
+            <p>Speak directly with our team. We're available Monday–Friday, 8AM–7PM.</p>
+            <a href="tel:+18668262626" class="phone-number">(866) 826-2626</a>
+          </div>
+
+          <div class="sidebar-card">
+            <div class="sidebar-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <h3>Email Us</h3>
+            <p>Send your questions or documents directly.</p>
+            <a href="mailto:info@yancoappraisal.com">info@yancoappraisal.com</a>
+          </div>
+
+          <div class="sidebar-card">
+            <div class="sidebar-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <h3>Service Area</h3>
+            <p><strong>New Hampshire:</strong> Hillsborough &amp; Rockingham Counties</p>
+            <p><strong>Massachusetts:</strong> Middlesex, Essex &amp; Suffolk Counties</p>
+          </div>
+
+          <div class="sidebar-card">
+            <div class="sidebar-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <h3>Hours</h3>
+            <p>Monday – Friday: 8:00 AM – 7:00 PM<br>Saturday &amp; Sunday: By Appointment</p>
+          </div>
+
+          <div class="sidebar-card sidebar-trust">
+            <div class="sidebar-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Your Trust, Guaranteed</h3>
+            <p>BBB A+ Rated since 2013. NH License #NHLR-520. MA License #75078. USPAP compliant. 20+ years of certified appraisal experience.</p>
+          </div>
+
+          <div class="sidebar-card">
+            <div class="sidebar-card-icon">
+              <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </div>
+            <h3>Follow Us</h3>
+            <p>See our latest work and client reviews.</p>
+            <a href="http://www.facebook.com/yancoappraisal" target="_blank" rel="noopener">Facebook</a> &bull;
+            <a href="https://www.yelp.com/biz/yanco-appraisal-service-nashua" target="_blank" rel="noopener">Yelp</a> &bull;
+            <a href="https://share.google/EO9v4gve5MB1dazVe" target="_blank" rel="noopener">Google</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-text">
+            <span class="logo-yanco">YANCO</span>
+            <span class="logo-sub">Appraisal Service, LLC</span>
+          </div>
+          <p class="footer-about">Certified residential appraisals for estate settlements, divorce proceedings, tax abatements, PMI removal, and more. Serving New Hampshire and Massachusetts since 2005.</p>
+          <div class="footer-social">
+            <a href="http://www.facebook.com/yancoappraisal" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="https://www.yelp.com/biz/yanco-appraisal-service-nashua" target="_blank" rel="noopener" aria-label="Yelp">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-7a1 1 0 110-2 1 1 0 010 2zm5 7h-2v-4h2v4zm0-5h-2v-2h2v2z"/></svg>
+            </a>
+            <a href="https://share.google/EO9v4gve5MB1dazVe" target="_blank" rel="noopener" aria-label="Google">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Services</h4>
+          <a href="index.html#services" class="footer-link">Estate Appraisals</a>
+          <a href="index.html#services" class="footer-link">Divorce Appraisals</a>
+          <a href="index.html#services" class="footer-link">Tax Abatement</a>
+          <a href="index.html#services" class="footer-link">PMI Removal</a>
+          <a href="index.html#services" class="footer-link">Pre-Listing Appraisals</a>
+          <a href="index.html#services" class="footer-link">Retrospective Valuations</a>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Contact</h4>
+          <a href="tel:+18668262626" class="footer-link">(866) 826-2626</a>
+          <a href="mailto:info@yancoappraisal.com" class="footer-link">info@yancoappraisal.com</a>
+          <a href="contact.html" class="footer-link">Request Appraisal</a>
+          <br>
+          <h4 class="footer-heading" style="margin-top: var(--space-6);">Coverage</h4>
+          <span class="footer-link">Hillsborough County, NH</span>
+          <span class="footer-link">Rockingham County, NH</span>
+          <span class="footer-link">Middlesex County, MA</span>
+          <span class="footer-link">Essex County, MA</span>
+          <span class="footer-link">Suffolk County, MA</span>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2025 Yanco Appraisal Service, LLC. All rights reserved.</span>
+        <span>Nashua, NH — Serving NH & MA</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
