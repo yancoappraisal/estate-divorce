@@ -134,49 +134,46 @@ if (sections.length && navLinks.length) {
   }, { passive: true });
 }
 
-// --- Contact form handler (mailto) ---
+// --- Contact form handler (Formspree) ---
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
+  contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const fields = {
-      'Name': document.getElementById('fullName')?.value,
-      'Phone': document.getElementById('phone')?.value,
-      'Email': document.getElementById('email')?.value,
-      'Role': document.getElementById('role')?.value,
-      'Appraisal Type': document.getElementById('serviceType')?.value,
-      'Timeline': document.getElementById('timeline')?.value,
-      'Property Address': document.getElementById('propertyAddress')?.value,
-      'Property Type': document.getElementById('propertyType')?.value,
-      'County': document.getElementById('county')?.value,
-      'Appraisal Date': document.getElementById('dateNeeded')?.value,
-      'Referral Source': document.getElementById('referral')?.value,
-      'Details': document.getElementById('details')?.value,
-    };
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+    }
 
-    const subject = encodeURIComponent(
-      `Appraisal Request: ${fields['Appraisal Type'] || 'General'} — ${fields['Name'] || 'New Client'}`
-    );
+    const data = new FormData(contactForm);
 
-    let body = 'NEW APPRAISAL REQUEST\n';
-    body += '═══════════════════════════\n\n';
-    Object.entries(fields).forEach(([key, val]) => {
-      if (val) body += `${key}: ${val}\n`;
-    });
-    body += '\n═══════════════════════════\n';
-    body += 'Submitted via YancoAppraisal.com';
+    try {
+      const response = await fetch('https://formspree.io/f/mqegygdk', {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
 
-    const mailtoUrl = `mailto:info@yancoappraisal.com?subject=${subject}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailtoUrl;
-
-    // Show success state
-    setTimeout(() => {
-      contactForm.style.display = 'none';
-      const formTitle = document.querySelector('.form-title');
-      if (formTitle) formTitle.style.display = 'none';
-      const success = document.getElementById('formSuccess');
-      if (success) success.classList.add('active');
-    }, 500);
+      if (response.ok) {
+        contactForm.style.display = 'none';
+        const formTitle = document.querySelector('.form-title');
+        if (formTitle) formTitle.style.display = 'none';
+        const success = document.getElementById('formSuccess');
+        if (success) success.classList.add('active');
+      } else {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Submit Request';
+        }
+        alert('There was a problem submitting your request. Please call us at (866) 826-2626.');
+      }
+    } catch (err) {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Submit Request';
+      }
+      alert('There was a problem submitting your request. Please call us at (866) 826-2626.');
+    }
   });
 }
