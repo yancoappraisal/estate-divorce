@@ -166,14 +166,14 @@ if (contactForm) {
           submitBtn.disabled = false;
           submitBtn.textContent = 'Submit Request';
         }
-        alert('There was a problem submitting your request. Please call us at (866) 826-2626.');
+        alert('There was a problem submitting your request. Please call us at (866) 869-2626.');
       }
     } catch (err) {
       if (submitBtn) {
         submitBtn.disabled = false;
         submitBtn.textContent = 'Submit Request';
       }
-      alert('There was a problem submitting your request. Please call us at (866) 826-2626.');
+      alert('There was a problem submitting your request. Please call us at (866) 869-2626.');
     }
   });
 }
